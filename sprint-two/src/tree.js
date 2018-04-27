@@ -22,14 +22,25 @@ treeMethods.contains = function(target) {
   // the value of this node equals target
     //return true else false
   
-  //var node = this.children[0];
   
-  
-  if(this.children[0].value === target) {
-    return true;
+  if(this.value === target) {
+      return true;
   } else {
-    return false  
+    for (var i = 0; i < this.children.length; i++) {
+      if(this.children[i].contains(target)) {
+        return true;
+      }
+    }
+      return false
   }
+
+
+
+  // if(this.children[0].value === target) {
+  //   return true;
+  // } else {
+  //   return false  
+  // }
 };
 
 
