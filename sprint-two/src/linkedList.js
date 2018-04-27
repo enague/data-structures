@@ -21,9 +21,23 @@ var LinkedList = function() {
   };
 
   list.removeHead = function() {
+    list.head=list.tail;
+    return list.head.value;
   };
 
   list.contains = function(target) {
+    var node = list.head;
+    
+    while(node) {
+      if(node.value === target) {
+        return true;
+      }
+
+      node= node.next
+    }
+
+      return false;
+    
   };
 
   return list;
