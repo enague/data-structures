@@ -34,13 +34,6 @@ treeMethods.contains = function(target) {
       return false
   }
 
-
-
-  // if(this.children[0].value === target) {
-  //   return true;
-  // } else {
-  //   return false  
-  // }
 };
 
 
