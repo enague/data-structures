@@ -39,17 +39,25 @@ tree_Methods.contains = function (value) {
   }
 
   if( this.value < value){
-    this.right.contains(value);
+    if(!this.right){
+      return false;
+    } else if(this.right) {
+      return this.right.contains(value)
+    }
   } 
 
   if (this.value > value ){
-    this.left.contains(value);
+    if(!this.left){
+      return false;
+    } else if (this.left) {
+      return this.left.contains(value);
+    }
   } 
   
-  return false;
 };
 
-tree_Methods.depthFirstLog = function () {
+tree_Methods.depthFirstLog = function (cb) {
+
 
 };
 
